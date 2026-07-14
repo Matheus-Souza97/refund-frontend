@@ -205,6 +205,9 @@ A aplicação pode ser publicada facilmente em plataformas como:
 
 **Matheus Souza**
 
+- Email: matheus.souza.dev01@gmail.com
+- LinkedIn: https://www.linkedin.com/in/matheus-souza-eng-software
+
 ---
 
 # 📄 Licença
