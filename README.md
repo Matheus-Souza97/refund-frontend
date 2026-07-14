@@ -205,9 +205,6 @@ A aplicação pode ser publicada facilmente em plataformas como:
 
 **Matheus Souza**
 
-- GitHub: https://github.com/Matheus-Souza97
-- LinkedIn: https://www.linkedin.com/in/SEU-LINK
-
 ---
 
 # 📄 Licença
