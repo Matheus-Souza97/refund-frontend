@@ -56,7 +56,7 @@ O projeto foi desenvolvido com foco em boas práticas de desenvolvimento utiliza
 ## Login
 
 <p align="justify">
-  <img src="./src/assets/login.png" alt="login" width="35%">
+  <img src="./src/assets/login.png" alt="login" width="80%">
 </p>
 
 ---
@@ -64,7 +64,7 @@ O projeto foi desenvolvido com foco em boas práticas de desenvolvimento utiliza
 ## Criando Usuario
 
 <p align="justify">
-  <img src="./src/assets/create-user.png" alt="Cadastro de usuário" width="35%">
+  <img src="./src/assets/create-user.png" alt="Cadastro de usuário" width="80%">
 </p>
 
 ---
@@ -72,7 +72,7 @@ O projeto foi desenvolvido com foco em boas práticas de desenvolvimento utiliza
 ## Solicitando Reembolso
 
 <p align="justify">
-  <img src="./src/assets/create.png" alt="Solicitando Reembolso" width="35%">
+  <img src="./src/assets/create.png" alt="Solicitando Reembolso" width="80%">
 </p>
 
 ---
@@ -80,7 +80,7 @@ O projeto foi desenvolvido com foco em boas práticas de desenvolvimento utiliza
 ## Reembolso Confirmado
 
 <p align="justify">
-  <img src="./src/assets/concluido.png" alt="Reembolso Confirmado" width="35%">
+  <img src="./src/assets/concluido.png" alt="Reembolso Confirmado" width="80%">
 </p>
 
 ---
@@ -88,7 +88,7 @@ O projeto foi desenvolvido com foco em boas práticas de desenvolvimento utiliza
 ## Visualizando a solicitacão
 
 <p align="justify">
-  <img src="./src/assets/preview.png" alt="Visualizando a solicitacão" width="35%">
+  <img src="./src/assets/preview.png" alt="Visualizando a solicitacão" width="80%">
 </p>
 
 ---
