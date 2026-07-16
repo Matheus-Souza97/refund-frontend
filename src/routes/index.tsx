@@ -4,17 +4,12 @@ import { AuthRoutes} from "./auth-routes"
 import { EmployeeRoutes } from "./EmployeeRoutes";
 import { ManagerRoutes } from "./ManagerRoutes";
 
-const isLoadind = false
-//const session = undefined
-
-const session = {
-  user: {
-    role: "employee",
-  }
-}
-
+import { useAuth } from "../hooks/useAuth";
 
 export function Routes() {
+  const {session, isLoading} = useAuth()
+  
+
   function Route() {
     switch (session?.user.role) {
       case "employee":
@@ -28,7 +23,7 @@ export function Routes() {
         
     }
   }
-  if(isLoadind) {
+  if(isLoading) {
     return <Loading/>
   }
   return (

@@ -13,7 +13,7 @@ export const CATEGORIES = {
     name: "Outros",
     icon: othersSvg
   },
-  service: {
+  services: {
     name: "Servicos",
     icon: servicesSvg
   },

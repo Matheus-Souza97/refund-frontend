@@ -1,6 +1,23 @@
 import { useState } from "react"
+import { useNavigate } from "react-router"
+
+import { z, ZodError } from "zod"
+import { AxiosError } from "axios"
+
+import { api } from "../services/api"
+
 import { Input } from "../components/Input"
 import { Button } from "../components/Button"
+
+const signUpSchema = z.object({
+  name: z.string().trim().min(1, "Informe o nome"),
+  email: z.string().email("E-mail inválido"),
+  password: z.string().min(6, "A senha deve ter no minimo 6 digitos"),
+  passwordConfirm: z.string("Confirme a senha")
+}).refine((data) => data.password === data.passwordConfirm, {
+  message: "As senhas não são iguais",
+  path: ["passwordConfirm"]
+})
 
 export function SignUp() {
   const [name, setName] = useState("")
@@ -9,9 +26,34 @@ export function SignUp() {
   const [passwordConfirm, setPasswordConfirm] = useState("")
   const [isLoading, setIsLoading] = useState(false)
 
-  function onSubmit(e: React.SubmitEvent<HTMLFormElement>) {
+  const navigate = useNavigate()
+
+  async function onSubmit(e: React.SubmitEvent<HTMLFormElement>) {
     e.preventDefault()
-    console.log(name, email, password, passwordConfirm)
+    try {
+      setIsLoading(true)
+      const data = signUpSchema.parse({
+        name, email, password, passwordConfirm
+      })
+
+      await api.post("/users", data)
+
+      if(confirm("Cadastrado com sucesso. Ir para a tela de login?")) {
+        navigate("/")
+      }
+      
+    } catch (error) {
+      console.log(error)
+      if(error instanceof ZodError) {
+        return alert(error.issues[0].message)
+      } 
+      if(error instanceof AxiosError) {
+        return alert(error.response?.data.message)
+
+      }
+    } finally{
+      setIsLoading(false)
+    }
   }
   return <form onSubmit={onSubmit} className="w-full flex flex-col gap-4">
 
@@ -29,3 +71,4 @@ export function SignUp() {
 
   </form>
 }
+
